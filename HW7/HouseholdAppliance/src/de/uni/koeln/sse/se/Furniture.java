@@ -21,7 +21,12 @@ public class Furniture implements HouseholdItem{
 		this.height = height;
 		this.weight = weight;
 	}
-
+	
+	
+	@Override
+	public double accept(Visitor visitor) {
+		return visitor.visit(this);
+	}
 
 	
 

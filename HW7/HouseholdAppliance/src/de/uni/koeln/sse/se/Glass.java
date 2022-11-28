@@ -6,7 +6,6 @@ public class Glass implements HouseholdItem{
 	int lenght;
 	int width;
 	int height;
-
 	int tickness;
 
 	
@@ -17,6 +16,11 @@ public class Glass implements HouseholdItem{
 		this.height = height;
 		this.tickness = tickness;
 	
+	}
+	
+	@Override
+	public double accept(Visitor visitor) {
+		return visitor.visit(this);
 	}
 
 

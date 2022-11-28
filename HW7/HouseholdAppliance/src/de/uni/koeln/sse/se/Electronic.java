@@ -22,6 +22,11 @@ public class Electronic implements HouseholdItem{
 		this.weight = weight;
 		this.fragile = fragile;
 	}
+	
+	@Override
+	public double accept(Visitor visitor) {
+		return visitor.visit(this);
+	}
 
 	
 //Getters and Setters
